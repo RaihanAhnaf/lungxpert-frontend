@@ -1,0 +1,86 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#loginimg{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(../public/assets/img/auth-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-sbar{
+  background-color: #4954FD;
+}
+
+.nav-pills li a:hover{
+  background-color: #3943E4;
+}
+
+.nav-link.active {
+  background: #3943E4 !important;
+}
+
+.bg-ungu{
+  background-color: #4954FD;
+}
+
+.hero{
+  background-color: #4954FD;
+}
+
+.ungu{
+  color: #4954FD;
+}
+
+.btn-try{
+  background-color: white;
+  border-radius: 360px;
+  border: none;
+}
+
+.box{
+  background-color: #FAFAFA;
+  border-radius: 10px;
+}
+
+.hidden{
+  display: none;
+}
