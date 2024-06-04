@@ -75,7 +75,7 @@ const DataPasienDetail = () => {
         <div className="row mt-5">
           <div className="box col-md-5 px-4 py-4 me-2">
             <img
-              src={`http://localhost:8000/public/images/${payload.image}`}
+              src={`http://147.139.191.239:8000/public/images/${payload.image}`}
               onClick={() => setIsOpen(!isOpen)}
               className="w-100"
             />
@@ -104,7 +104,7 @@ const DataPasienDetail = () => {
         createPortal(
           <ModalVarian
             onClose={() => setIsOpen(false)}
-            imgPath={`http://localhost:8000/public/images/${payload.image}`}
+            imgPath={`http://147.139.191.239:8000/public/images/${payload.image}`}
           />,
           document.body
         )}
