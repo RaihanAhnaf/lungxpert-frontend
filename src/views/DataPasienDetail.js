@@ -13,6 +13,7 @@ const DataPasienDetail = () => {
   const [payload, setPayload] = useState({
     name: "",
     result: "",
+    date: null,
     label: "",
     image: "",
   });
@@ -27,6 +28,7 @@ const DataPasienDetail = () => {
   const [result, setResult] = useState({
     name: "",
     prediction: "",
+    date: null,
     label: "",
     image: "",
   });
@@ -45,6 +47,7 @@ const DataPasienDetail = () => {
         result: response.data.data.result,
         label: response.data.data.label,
         image: response.data.data.image,
+        date: response.data.data.date_formatted,
       });
     } catch (error) {
       console.error({ error });
@@ -92,7 +95,7 @@ const DataPasienDetail = () => {
           </div>
           <div className="mt-4">
             <p>Hari, Tanggal</p>
-            <h5>Rabu, 18 Mei 2023</h5>
+            <h5>{payload.date}</h5>
           </div>
           <div className="mt-4">
             <p>Label dari dokter</p>
