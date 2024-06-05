@@ -105,7 +105,7 @@ const DataPasien = () => {
                       <td>{patient.name}</td>
                       <td>{patient.result}</td>
                       <td>{patient.label}</td>
-                      <td>{patient.date}</td>
+                      <td>{patient.birth_date}</td>
                       <td>
                         <div className="d-flex justify-content-center px-4">
                           <Link
