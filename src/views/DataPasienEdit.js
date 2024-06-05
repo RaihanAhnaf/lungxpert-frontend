@@ -197,7 +197,7 @@ const DataPasienEdit = () => {
           </div>
           <div className="box col-md-6 px-4 py-4 ms-2 d-flex flex-column align-items-center justify-content-center">
             <h5>Pasien ini masuk kelas</h5>
-            <strong className="my-3 ungu fs-1">{payload.result}</strong>
+            <strong className="my-3 ungu fs-1">{result.result}</strong>
           </div>
         </div>
         <div className="row mt-3">
