@@ -104,7 +104,11 @@ const DataPasien = () => {
                       <td>{idx + 1}</td>
                       <td>{patient.name}</td>
                       <td>{patient.result}</td>
-                      <td>{patient.label ?? "-"}</td>
+                      <td>
+                        {patient.label && patient.label != ""
+                          ? patient.label
+                          : "-"}
+                      </td>
                       <td>{patient.date_formatted}</td>
                       <td>
                         <div className="d-flex justify-content-center px-4">
