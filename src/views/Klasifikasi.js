@@ -135,8 +135,11 @@ const Klasifikasi = () => {
           },
         },
         error: {
-          render({ err }) {
-            console.error({ err });
+          render(err) {
+            console.error(err.data);
+            if (err.data.response.status === 400) {
+              return "Bukan Data X-Ray";
+            }
             return "Prediksi Gagal";
           },
         },
