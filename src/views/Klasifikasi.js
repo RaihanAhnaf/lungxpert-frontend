@@ -218,7 +218,7 @@ const Klasifikasi = () => {
                   (*dapat diisi ketika prediksi tersedia)
                 </small>
               </label>
-              <div className="input-group mt-2 mb-3">
+              {/* <div className="input-group mt-2 mb-3">
                 <input
                   type="text"
                   placeholder="Label"
@@ -227,7 +227,22 @@ const Klasifikasi = () => {
                   disabled={!result.prediction}
                   value={result.label}
                 />
-              </div>
+              </div> */}
+              <select
+                name="label"
+                class="form-select mt-2 mb-3"
+                aria-label="Default select label"
+                value={result.label}
+                onChange={handleLabel}
+                disabled={!result.prediction}
+              >
+                <option selected>Pilih Label</option>
+                <option value="Normal">Normal</option>
+                <option value="Tuberkulosis">Tuberkulosis</option>
+                <option value="Pneumonia">Pneumonia</option>
+                <option value="Covid19">Covid19</option>
+              </select>
+
               <div className="d-flex justify-content-end">
                 <button
                   className="btn btn-primary"

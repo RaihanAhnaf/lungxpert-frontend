@@ -221,7 +221,7 @@ const DataPasienEdit = () => {
                   (*dapat diisi ketika prediksi tersedia)
                 </small>
               </label>
-              <div className="input-group mt-2 mb-3">
+              {/* <div className="input-group mt-2 mb-3">
                 <input
                   type="text"
                   placeholder="Label"
@@ -229,7 +229,20 @@ const DataPasienEdit = () => {
                   onChange={handleLabel}
                   value={payload.label}
                 />
-              </div>
+              </div> */}
+              <select
+                name="label"
+                class="form-select mt-2 mb-3"
+                aria-label="Default select label"
+                value={payload.label}
+                onChange={handleLabel}
+              >
+                <option selected>Pilih Label</option>
+                <option value="Normal">Normal</option>
+                <option value="Tuberkulosis">Tuberkulosis</option>
+                <option value="Pneumonia">Pneumonia</option>
+                <option value="Covid19">Covid19</option>
+              </select>
 
               <div className="d-flex justify-content-end">
                 <button
