@@ -236,7 +236,7 @@ const Klasifikasi = () => {
                 onChange={handleLabel}
                 disabled={!result.prediction}
               >
-                <option selected>Pilih Label</option>
+                <option selected>-</option>
                 <option value="Normal">Normal</option>
                 <option value="Tuberkulosis">Tuberkulosis</option>
                 <option value="Pneumonia">Pneumonia</option>
