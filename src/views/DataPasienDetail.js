@@ -78,7 +78,7 @@ const DataPasienDetail = () => {
         <div className="row mt-5">
           <div className="box col-md-5 px-4 py-4 me-2">
             <img
-              src={`https://api.lungxpert.my.id/public/images/${payload.image}`}
+              src={`http://127.0.0.1:8000/public/images/${payload.image}`}
               onClick={() => setIsOpen(!isOpen)}
               className="w-100"
             />
@@ -107,7 +107,7 @@ const DataPasienDetail = () => {
         createPortal(
           <ModalVarian
             onClose={() => setIsOpen(false)}
-            imgPath={`https://api.lungxpert.my.id/public/images/${payload.image}`}
+            imgPath={`http://127.0.0.1:8000/public/images/${payload.image}`}
           />,
           document.body
         )}

@@ -6,7 +6,7 @@ export const getPrediction = (file, name) => {
   const formData = new FormData();
   formData.append(`image`, file);
   formData.append("name", name);
-  return axios.post(`https://api.lungxpert.my.id/api/patients`, formData, {
+  return axios.post(`http://127.0.0.1:8000/api/patients`, formData, {
     headers: { Authorization: `Bearer ${token}` },
   });
 };

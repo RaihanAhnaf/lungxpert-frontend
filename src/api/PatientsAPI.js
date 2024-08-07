@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getPatients = () => {
   const token = localStorage.getItem("token");
-  return axios.get("https://api.lungxpert.my.id/api/patients", {
+  return axios.get("http://127.0.0.1:8000/api/patients", {
     headers: { Authorization: `Bearer ${token}` },
   });
 };
@@ -10,7 +10,7 @@ export const getPatients = () => {
 export const createPatients = ({ name, result, label, image }) => {
   const token = localStorage.getItem("token");
   return axios.post(
-    "https://api.lungxpert.my.id/api/patients",
+    "http://127.0.0.1:8000/api/patients",
     { name, result, label, image },
     {
       headers: { Authorization: `Bearer ${token}` },
@@ -21,7 +21,7 @@ export const createPatients = ({ name, result, label, image }) => {
 export const editPatients = ({ id, name, result, label, image }) => {
   const token = localStorage.getItem("token");
   return axios.put(
-    `https://api.lungxpert.my.id/api/patients/${id}`,
+    `http://127.0.0.1:8000/api/patients/${id}`,
     { name, result, label, image },
     {
       headers: { Authorization: `Bearer ${token}` },
@@ -31,14 +31,14 @@ export const editPatients = ({ id, name, result, label, image }) => {
 
 export const getPatient = ({ id }) => {
   const token = localStorage.getItem("token");
-  return axios.get(`https://api.lungxpert.my.id/api/patients/${id}`, {
+  return axios.get(`http://127.0.0.1:8000/api/patients/${id}`, {
     headers: { Authorization: `Bearer ${token}` },
   });
 };
 
 export const deletePatient = ({ id }) => {
   const token = localStorage.getItem("token");
-  return axios.delete(`https://api.lungxpert.my.id/api/patients/${id}`, {
+  return axios.delete(`http://127.0.0.1:8000/api/patients/${id}`, {
     headers: { Authorization: `Bearer ${token}` },
   });
 };
